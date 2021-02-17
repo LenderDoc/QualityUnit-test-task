@@ -14,7 +14,7 @@ public class Processor {
     private final List<String> output = new ArrayList<>();
     private final int maxLinesPerFile = 100000;
     
-    void clear() {
+    public void clear() {
         waitingTimeLines.clear();
         output.clear();
     }
@@ -22,7 +22,7 @@ public class Processor {
     /**
      * Note: The first line of the file contains the total number of lines.
      */
-    void process(Path path) throws IOException {
+    public void process(Path path) throws IOException {
         clear();
 
         try ( Stream<String> lines = Files.lines(path)) {
@@ -30,7 +30,7 @@ public class Processor {
         }
     }
 
-    void process(String line) {
+    public void process(String line) {
         if (line.isEmpty()) {
             return;
         }
@@ -43,11 +43,12 @@ public class Processor {
                 apply(new QueryLine(line));
                 break;
             default:
-                throw new IllegalArgumentException("Illegal line's first symbol. Symbol 'C' or 'D' is required. " + line);
+                throw new IllegalArgumentException("Illegal the first symbol of the line. Symbol 'C' or 'D' is required. " + line);
         }
     }
 
-    void apply(QueryLine query) {
+    
+    private void apply(QueryLine query) {
         OptionalDouble avgTime = waitingTimeLines.stream().filter((wt)
                 -> wt.serviceId.match(query.serviceId)
                 && wt.questionTypeId.match(query.questionTypeId)
@@ -66,16 +67,16 @@ public class Processor {
 
         output.add(queryResult);
     }
-
-    void print() {
+    
+    public void print() {
         output.stream().forEach(System.out::println);
     }
 
-    void print(Path path) throws IOException {
+    public void print(Path path) throws IOException {
         Files.write(path, output);
     }
 
-    String getLastQueryResult() {
+    public String getLastQueryResult() {
         return output.size() > 0 ? output.get(output.size()-1) : "";
     }
 }

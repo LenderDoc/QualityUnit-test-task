@@ -3,7 +3,7 @@ package programmerstasken.qualityunit;
 /**
  * The special value "*" stored as a ServiceId where service=0
  */
-public class ServiceId {
+class ServiceId {
 
     private int service;
     private int variation;

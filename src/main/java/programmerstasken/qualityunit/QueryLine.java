@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class QueryLine {
+class QueryLine {
 
     ServiceId serviceId;
     QuestionTypeId questionTypeId;
@@ -37,7 +37,7 @@ public class QueryLine {
 
         String dateValues[] = values[4].split("-");
 
-        if (dateValues.length == 0 || dateValues.length > 5) {
+        if (dateValues.length == 0 || dateValues.length > 2) {
             throw new IllegalArgumentException(queryLine);
         }
 

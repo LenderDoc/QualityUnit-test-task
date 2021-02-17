@@ -3,7 +3,7 @@ package programmerstasken.qualityunit;
 /**
  * The special value "*" stored as a QuestionTypeId where questionType=0
  */
-public class QuestionTypeId {
+class QuestionTypeId {
 
     private int questionType;
     private int category;
