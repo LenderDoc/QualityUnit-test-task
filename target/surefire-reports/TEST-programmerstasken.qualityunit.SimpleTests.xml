@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="programmerstasken.qualityunit.SimpleTests" time="0.04" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="programmerstasken.qualityunit.SimpleTests" time="0.016" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire5820785155508911958\surefirebooter7125578423987785824.jar C:\Users\user\AppData\Local\Temp\surefire5820785155508911958 2021-02-17T02-10-41_642-jvmRun1 surefire17210374595959248782tmp surefire_06210933907547324137tmp"/>
+    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire1307097037201453492\surefirebooter17148208919657100781.jar C:\Users\user\AppData\Local\Temp\surefire1307097037201453492 2021-02-18T04-59-52_663-jvmRun1 surefire14129740742447846990tmp surefire_013339796579697071934tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Java\Quality Unit Test\QualityUnit-test-task\target\test-classes;D:\Java\Quality Unit Test\QualityUnit-test-task\target\classes;C:\Users\user\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire5820785155508911958\surefirebooter7125578423987785824.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire1307097037201453492\surefirebooter17148208919657100781.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13.0.2+8"/>
@@ -39,7 +39,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-11.2\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-11.2\netbeans\java\maven-nblib\netbeans-eventspy.jar;C:\Program Files\NetBeans-11.2\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="localRepository" value="C:\Users\user\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
@@ -55,9 +55,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="ServiceIdTest" classname="programmerstasken.qualityunit.SimpleTests" time="0.004"/>
-  <testcase name="ProcessorTest" classname="programmerstasken.qualityunit.SimpleTests" time="0.027"/>
-  <testcase name="QueryLineTest" classname="programmerstasken.qualityunit.SimpleTests" time="0.002"/>
-  <testcase name="WaitingTimeLineTest" classname="programmerstasken.qualityunit.SimpleTests" time="0.002"/>
-  <testcase name="QuestionTypeIdTest" classname="programmerstasken.qualityunit.SimpleTests" time="0.001"/>
+  <testcase name="ServiceIdTest" classname="programmerstasken.qualityunit.SimpleTests" time="0"/>
+  <testcase name="ProcessorTest" classname="programmerstasken.qualityunit.SimpleTests" time="0.016"/>
+  <testcase name="QueryLineTest" classname="programmerstasken.qualityunit.SimpleTests" time="0"/>
+  <testcase name="WaitingTimeLineTest" classname="programmerstasken.qualityunit.SimpleTests" time="0"/>
+  <testcase name="QuestionTypeIdTest" classname="programmerstasken.qualityunit.SimpleTests" time="0"/>
 </testsuite>

@@ -1,19 +1,17 @@
 package programmerstasken.qualityunit;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 class WaitingTimeLine {
 
     ServiceId serviceId;
     QuestionTypeId questionTypeId;
-
     boolean firstAnswer;
-    Date date;
+    LocalDate date;
     int waitingTime;           // in minutes
 
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+    private static final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     /**
      * Waiting Timeline syntax: 
@@ -29,14 +27,8 @@ class WaitingTimeLine {
 
         serviceId = new ServiceId(values[1]);
         questionTypeId = new QuestionTypeId(values[2]);
-        firstAnswer = values[3].equals("P");
-
-        try {
-            date = dateFormat.parse(values[4]);
-        } catch (ParseException ex) {
-            throw new IllegalArgumentException("Invalid date format: " + waitingTimeLine);
-        }
-
+        firstAnswer = values[3].equals("P");        
+        date = LocalDate.parse(values[4],dateFormatter);
         waitingTime = Integer.valueOf(values[5]);
     }
 
@@ -46,7 +38,7 @@ class WaitingTimeLine {
                 serviceId,
                 questionTypeId,
                 firstAnswer ? "P" : "N",
-                dateFormat.format(date),
+                dateFormatter.format(date),
                 waitingTime);
     }
 }

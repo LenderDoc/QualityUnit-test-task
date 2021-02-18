@@ -53,8 +53,8 @@ public class Processor {
                 -> wt.serviceId.match(query.serviceId)
                 && wt.questionTypeId.match(query.questionTypeId)
                 && wt.firstAnswer == query.firstAnswer
-                && wt.date.compareTo(query.dateFrom) >= 0
-                && wt.date.before(query.dateTo))
+                &&(wt.date.isEqual(query.dateFrom) || wt.date.isAfter(query.dateFrom))
+                && wt.date.isBefore(query.dateTo))
                 .mapToInt((wt) -> wt.waitingTime).average();
 
         String queryResult;
